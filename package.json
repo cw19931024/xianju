@@ -1,0 +1,23 @@
+{
+  "name": "xianju",
+  "version": "1.0.0",
+  "description": "闲居App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cw19931024/xianju.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cw19931024/xianju/issues"
+  },
+  "homepage": "https://github.com/cw19931024/xianju#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.2"
+  }
+}
