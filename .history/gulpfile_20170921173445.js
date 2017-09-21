@@ -29,9 +29,3 @@ gulp.task('copy',function(){
     return gulp.src([develop+".js",develop+".json"],{base:'develop'})
     .pipe(gulp.dest(url))
 })
-
-gulp.task('run',['copy','html','less'],function(){
-    gulp.watch([develop+'.js',develop+'.json'],['copy']);
-    gulp.watch(develop+'.html',['html']);
-    gulp.watch(develop+'.less',['less']);
-})

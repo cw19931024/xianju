@@ -30,8 +30,9 @@ gulp.task('copy',function(){
     .pipe(gulp.dest(url))
 })
 
+var watchUrl=["./develop/**/**.js"]
 gulp.task('run',['copy','html','less'],function(){
-    gulp.watch([develop+'.js',develop+'.json'],['copy']);
-    gulp.watch(develop+'.html',['html']);
-    gulp.watch(develop+'.less',['less']);
+    gulp.watch(watchUrl,'copy');
+    // gulp.watch(develop+'.html','html');
+    // gulp.watch(develop+'.less','less');
 })

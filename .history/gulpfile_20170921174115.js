@@ -31,7 +31,7 @@ gulp.task('copy',function(){
 })
 
 gulp.task('run',['copy','html','less'],function(){
-    gulp.watch([develop+'.js',develop+'.json'],['copy']);
-    gulp.watch(develop+'.html',['html']);
-    gulp.watch(develop+'.less',['less']);
+    gulp.watch([develop+'.js',develop+'.json'],'copy');
+    gulp.watch(develop+'.html','html');
+    gulp.watch(develop+'.less','less');
 })

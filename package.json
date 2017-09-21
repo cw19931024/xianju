@@ -18,6 +18,8 @@
   "homepage": "https://github.com/cw19931024/xianju#readme",
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-less": "^3.3.2"
+    "gulp-less": "^3.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sequence": "^0.4.6"
   }
 }
