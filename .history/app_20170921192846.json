@@ -1,0 +1,27 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/property/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "闲居,美好生活",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "position": "top",
+    "list": [
+      {
+        "pagePath": "pages/property/index",
+        "text": "找房攻略",
+        "borderStyle": "blcak"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "精选房源"
+      }
+    ]
+  }
+}

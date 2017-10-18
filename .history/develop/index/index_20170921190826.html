@@ -6,9 +6,20 @@
         <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
         <text class="userinfo-nickname">{{userInfo.nickName}}</text>
       </block>
-    </view>
+    </view> -->
     <view class="usermotto">
       <text class="user-motto">{{motto}}</text>
+    </view>
+    <view class="Data-list">
+      <view class="Data-view" wx:for="{{list}}" wx:key='title' wx:for-item="item">
+        <wiew class="data-info">
+          <image class='info-image' src='{{item.author.avatar_url}}' mode='widthFix'></image>
+            <wiew>{{item.tab}}</view>
+        </wiew>
+        <wiew class="data-title">
+          {{item.title}}
+        </wiew>
+      </view>
     </view>
   </view>
   

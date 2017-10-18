@@ -4,7 +4,7 @@ const rename = require("gulp-rename");
 const gulpTask = require('gulp-sequence')
 gulp.task("run", function() {});
 
-const url='./pages'
+const url='./page'
 const develop = './develop/**/**'
 
 gulp.task("less", function() {

@@ -1,0 +1,22 @@
+<view class="property">
+    <view class="view-swiper">
+        <swiper indicator-dots="false" autoplay="true" interval="5000" duration="1000">
+            <block wx:for="{{imgUrls}}">
+                <swiper-item>
+                    <image src="{{item}}" class="slide-image" width="355" height="150" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="view-content">
+        <view class="content-search">
+
+            <input type="text" class="Search" placeholder="关键词/地址/地区" />
+        </view>
+        <view class="content-filer">
+            <view class="area">
+                
+            </view>
+        </view>
+    </view>
+</view>
