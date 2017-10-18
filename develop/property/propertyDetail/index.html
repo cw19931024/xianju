@@ -1,0 +1,45 @@
+<view class="property">
+    <view class="content-search">
+        <input type="text" class="Search" placeholder="关键词/地址/地区" />
+    </view>
+    <view class="view-swiper">
+        <swiper indicator-dots="false" autoplay="true" interval="5000" duration="1000">
+            <block wx:for="{{imgUrls}}">
+                <swiper-item>
+                    <image src="{{item}}" class="slide-image" width="355" height="150" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="view-sequen">
+        <view class="sequen-type">位置</view>
+        <view class="sequen-type">租金</view>
+        <view class="sequen-type">来源</view>
+        <view class="sequen-type">更多</view>
+    </view>
+    <view class="view-content">
+        <view class="viewList" wx:for="{{list}}" wx:click="getDetail()">
+            <view class="viewImage">
+                <image src="{{item.imgUrl}}" />
+            </view>
+            <view class="viewText">
+                <view class="Text-tit">{{item.property.name}}</view>
+                <view class="Text-content">
+                    <span>{{item.property.structure.F_num}}室{{item.property.structure.T_num}}厅{{item.property.structure.C_num}}厨{{item.property.structure.W_num}}卫</span><span>{{item.type}}</span>
+                    <span class="Text-money">{{item.property.money}}元/月</span>
+                </view>
+                <view class="Text-info">
+                    <span>
+                        {{item.property.district}}-{{item.property.area}}
+                    </span>
+                    <span class="info-date">
+                        {{item.property.TimeStr}}
+                    </span>
+                </view>
+                <view class="property-icon">
+                    <span wx:for="{{item.property.icon}}" wx:for-item="list">{{list.label}}</span>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
