@@ -1,0 +1,61 @@
+.document {
+  font-size: 12px;
+}
+.document .doc-type {
+  line-height: 20px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+}
+.document .doc-type .type-view {
+  display: table-cell;
+  width: 50%;
+  padding: 8px 0;
+  border: 1px solid #ddd;
+}
+.document .doc-document {
+  padding: 5px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.document .doc-document .doc-list {
+  width: 100%;
+  overflow: hidden;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.document .doc-document .doc-list .doc-image {
+  float: left;
+  width: 110px;
+}
+.document .doc-document .doc-list .doc-image image {
+  width: 110px;
+  height: 84px;
+}
+.document .doc-document .doc-list .doc-desc {
+  float: left;
+  padding-left: 5px;
+  width: calc(100% - 115px);
+}
+.document .doc-document .doc-list .doc-desc .list-name {
+  font-size: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.document .doc-document .doc-list .doc-desc .list-info {
+  overflow: hidden;
+}
+.document .doc-document .doc-list .doc-desc .list-info .list-info-view {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.document .doc-document .doc-list .doc-desc .list-info .list-info-view .info-left {
+  float: left;
+}
+.document .doc-document .doc-list .doc-desc .list-info .list-info-view .info-right {
+  float: right;
+}

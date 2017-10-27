@@ -1,0 +1,8 @@
+<view class="document">
+    <view class="doc-list">
+        <div class="view doc-image">
+            
+        </div>
+        <view class="doc-desc"></view>
+    </view>
+</view>

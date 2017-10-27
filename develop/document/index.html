@@ -1,0 +1,25 @@
+<view class="document">
+    <view class="doc-type">
+        <view class="type-view" wx:for="{{type}}">{{item.label}}</view>
+    </view>
+    <view class="doc-document">
+        <view class="doc-list" wx:for="{{list}}">
+            <view class="doc-image">
+                <image src="{{item.imgUrl}}" />
+            </view>
+            <view class="doc-desc">
+                <view class="list-name">{{item.title}}</view>
+                <view class="list-info">
+                    <view class="list-info-view">
+                        <view class="info-left">{{item.author}}</view>
+                        <view class="info-right">{{item.date}}</view>
+                    </view>
+                    <view class="list-info-view">
+                        <view class="info-left">{{item.type}}</view>
+                        <view class="info-right">浏览量:{{item.browseCount}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

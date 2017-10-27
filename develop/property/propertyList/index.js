@@ -17,7 +17,7 @@ Page({
     let _this = this;
     wx.request({
       url:
-        "http://mock.qiaofang.local/mock/59e4b5706e68f216cf6fc43e/xianju/propertyList",
+        "http://www.easy-mock.com/mock/59e49e5f8a681e09d38c729d/xianju/propertyList",
       success: function(data) {
         data.data.data.forEach(function(e) {
           e.property.TimeStr = _this.DateStr(e.property.dateTime)
