@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/document/index",
     "pages/property/propertyList/index",
     "pages/property/propertyDetail/index",
     "pages/property/propertyEdit/index",
     "pages/property/propertyAdd/index",
+    "pages/document/index",
     "pages/index/index"
   ],
   "window": {

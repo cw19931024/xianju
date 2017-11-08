@@ -19,6 +19,9 @@
   color: white;
   display: none;
 }
+.property .swiper-lyout {
+  height: 240px;
+}
 .property .view-swiper {
   position: relative;
   width: 100%;
@@ -38,7 +41,7 @@
   padding: 8px 0;
 }
 .property .view-content {
-  padding: 5px  0 ;
+  padding: 5px 0;
   width: 100%;
   box-sizing: border-box;
 }

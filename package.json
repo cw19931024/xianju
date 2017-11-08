@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/cw19931024/xianju#readme",
   "dependencies": {
+    "es6-promise": "^4.1.1",
     "gulp": "^3.9.1",
     "gulp-less": "^3.3.2",
     "gulp-rename": "^1.2.2",

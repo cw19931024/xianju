@@ -18,7 +18,7 @@
         <view class="sequen-type">更多</view>
     </view>
     <view class="view-content">
-        <view class="viewList" wx:for="{{list}}" wx:click="getDetail()">
+        <view class="viewList" wx:for="{{list}}" data-property-id="{{item.property.id}}" bindtap="getDetail">
             <view class="viewImage">
                 <image src="{{item.imgUrl}}" />
             </view>

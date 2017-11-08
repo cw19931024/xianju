@@ -1,6 +1,6 @@
 //logs.js
 const util = require("../../../utils/util.js");
-
+const factory = require("/factory.js");
 Page({
   data: {
     list: [],
@@ -15,49 +15,18 @@ Page({
   },
   getPropertyList: function() {
     let _this = this;
-    wx.request({
-      url:
-        "http://www.easy-mock.com/mock/59e49e5f8a681e09d38c729d/xianju/propertyList",
-      success: function(data) {
-        data.data.data.forEach(function(e) {
-          e.property.TimeStr = _this.DateStr(e.property.dateTime)
-        }, this);
-        _this.setData({
-          list: data.data.data
-        });
-      }
+    factory.propertyList().then(function(data) {
+      data.data.forEach(function(e) {
+        e.property.TimeStr = util.DateStr(e.property.dateTime);
+      }, this);
+      _this.setData({ list: data.data });
     });
   },
-  DateStr: function(num) {
-    var date = new Date().getTime();
-    var time = parseInt((date - num) / 1000);
-    var str = '';
-    if (time < 60) {
-      str = parseInt(time) + "秒前";
-      return str;
-    }
-    if (time > 59 && time < 3600) {
-      str = parseInt(time / 60) + "分钟前";
-      return str;
-    }
-    if (time > 3599 && time < 86400) {
-      str = parseInt(time / 3600) + "小时前";
-      return str;
-    }
-    if (time > 86399 && time < 2592000) {
-      str = parseInt(time / 86400) + "天前";
-      return str;
-    }
-    if (time > 2591999 && time < 31104000) {
-      str = parseInt(time / 2592000) + "个月前";
-      return str;
-    }
-    if (time > 31103999 && time < 62208000) {
-      str = parseInt(time / 31104000) + "年前";
-      return str;
-    } else {
-      str = "很久之前";
-      return str;
-    }
+  getDetail: function(e) {
+    const id = e.currentTarget.dataset.propertyId;
+    console.log(e);
+    wx.navigateTo({
+      url: "../propertyDetail/index?id=" + id
+    });
   }
 });
