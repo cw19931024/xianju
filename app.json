@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/property/propertyList/index",
     "pages/property/propertyDetail/index",
+    "pages/property/propertyList/index",
     "pages/property/propertyEdit/index",
     "pages/property/propertyAdd/index",
     "pages/document/index",

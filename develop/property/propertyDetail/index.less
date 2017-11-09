@@ -1,104 +1,66 @@
 .property {
   font-size: 12px;
   position: relative;
-  .Search {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 0 10px;
-    box-sizing: border-box;
-  }
-  .content-search {
-    padding: 10px;
-    background: rgba(8, 0, 0, 0.6);
-    position: absolute;
-    width: e("calc(100% - 20px)");
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-    color: white;
-    display: none;
-  }
-  .swiper-lyout{
-    height: 240px;
-  }
-  .view-swiper {
-    position: relative;
-    width: 100%;
-    z-index: 0;
-    image {
+  .view-swiper{
+    image{
       width: 100%;
     }
   }
-  .view-sequen {
-    border-bottom: 1px solid #ddd;
-    overflow: hidden;
-    text-align: center;
-    .sequen-type {
-      width: 25%;
-      float: left;
-      padding: 8px 0;
+  .view-caontainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+    .property-title{
+      font-size: 16px;
+      overflow:hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .property-info{
+      margin-top: 1px solid #ddd;
+      .info-title{
+        font-size: 14px;
+      }
+      .info-lyout{
+        border-bottom: 1px solid #ddd;
+        padding: 5px;
+      }
     }
   }
-  .view-content {
-    padding: 5px 0;
+  .view-btn-group {
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    border-top: 1px solid #ddd;
+    height: 50px;
     width: 100%;
-    box-sizing: border-box;
-    .viewList {
-      padding: 5px 10px;
-      box-sizing: border-box;
-      width: 100%;
-      overflow: hidden;
-      border-bottom: 1px solid #ddd;
-      .viewImage {
-        float: left;
-        width: 110px;
-        image {
-          width: 100%;
-          height: 95px;
-          font-size: 0;
-        }
+    background: #f8f8f8;
+    .btn {
+      font-size: 14px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .btn-icon{
+        
       }
-      .viewText {
-        width: e("calc(100% - 110px)");
-        float: left;
-        padding-left: 10px;
-        box-sizing: border-box;
-        .Text-tit {
-          font-size: 16px;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          color: #333;
-          margin-bottom: 8px;
-        }
-        .Text-content {
-          position: relative;
-          margin-bottom: 7px;
-          .Text-money {
-            color: #df3031;
-            font-size: 15px;
-            font-weight: bold;
-            position: absolute;
-            right: 0px;
-            top: -2px;
-          }
-        }
-        .Text-info {
-          margin-bottom: 6px;
-          .info-date {
-            float: right;
-            margin-right: 1px;
-          }
-        }
-        .property-icon {
-          span {
-            border: 1px solid #259fca;
-            color: #259fca;
-            padding: 0 5px;
-            margin: 0 2px;
-          }
-        }
-      }
+    }
+    .btn:nth-child(1) {
+      flex-grow: 1;
+    }
+    .btn:nth-child(2) {
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      flex-grow: 1;
+    }
+    .btn:nth-child(3) {
+      flex-grow: 4;
+      background: rgb(6, 50, 92);
+      color: white;
     }
   }
 }
