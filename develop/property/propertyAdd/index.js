@@ -8,6 +8,11 @@ Page({
       "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
       "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
       "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg"
+    ],
+    propertyType: [
+      { value: "1", name: "出租", checked: true },
+      { value: "2", name: "出售", },
+      { value: "3", name: "租售", }
     ]
   },
   onLoad: function() {
@@ -20,7 +25,7 @@ Page({
         "http://mock.qiaofang.local/mock/59e4b5706e68f216cf6fc43e/xianju/propertyList",
       success: function(data) {
         data.data.data.forEach(function(e) {
-          e.property.TimeStr = _this.DateStr(e.property.dateTime)
+          e.property.TimeStr = _this.DateStr(e.property.dateTime);
         }, this);
         _this.setData({
           list: data.data.data
@@ -31,7 +36,7 @@ Page({
   DateStr: function(num) {
     var date = new Date().getTime();
     var time = parseInt((date - num) / 1000);
-    var str = '';
+    var str = "";
     if (time < 60) {
       str = parseInt(time) + "秒前";
       return str;

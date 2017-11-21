@@ -15,7 +15,7 @@
         <view class="property-info">
             <view class="estateInfo info-lyout">
                 <view class="info-title">小区信息</view>
-                {{property.city}}-{{property.district}}-{{property.estate.name}}
+                <view class="info-estateName">{{property.city}}-{{property.district}}-{{property.estate.name}}</view>
             </view>
             <view class="dateInfo info-lyout">
                 <view class="info-title">
@@ -26,7 +26,44 @@
             </view>
             <view class="labelInfo info-lyout">
                 <view class="info-title">标签信息</view>
-                <view class="label-group" wx:for="{{property.icon}}">{{item.label}}</view>
+                <view class="info-labels">
+                    <view class="label-group" wx:for="{{property.icon}}">{{item.label}}</view>
+                </view>
+            </view>
+            <view class="info-Images info-lyout">
+                <view class="info-title">图片信息</view>
+                <view class="info-view">
+                    <image src="{{item.imgUrl}}" class="info-img" wx:for="{{property.imgUrl}}" />
+                </view>
+            </view>
+            <view class="periphery-facility">
+                <view class="info-title">配套设施</view>
+                <view class="facility-data">
+                    <view class="fatys">洗衣机</view>
+                    <view class="fatys">空调</view>
+                    <view class="fatys">冰箱</view>
+                    <view class="fatys">宽带</view>
+                    <view class="fatys">电视</view>
+                    <view class="fatys">沙发</view>
+                    <view class="fatys">床</view>
+                </view>
+            </view>
+            <view class="periphery-remark">
+                <view class="info-title">房源描述</view>
+                <view class="facility-desc">
+                    {{property.remark}}
+                </view>
+            </view>
+            <view class="info-traffic">
+                <view class="info-title">
+                    周边设施
+                </view>
+                <view class="traffic">
+                    <map id="map" longitude="{{property.position[0].longitude}}" latitude="{{property.position[0].latitude}}" scale="10" controls="{{controls}}"
+                        bindcontroltap="controltap" markers="{{property.position}}" bindmarkertap="markertap" polyline="{{polyline}}"
+                        bindregionchange="regionchange" show-location>
+                    </map>
+                </view>
             </view>
         </view>
     </view>

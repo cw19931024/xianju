@@ -11,13 +11,13 @@ Page({
     ]
   },
   onLoad: function(option) {
-    console.log(option)
-    this.getDetail(option)
+    console.log(option);
+    this.getDetail(option);
   },
-  getDetail:function(data) {
+  getDetail: function(data) {
     let _this = this;
     factory.propertyDetail(data).then(function(res) {
-      console.log(res.data)
+      console.log(res.data);
       _this.setData({ property: res.data });
     });
   }

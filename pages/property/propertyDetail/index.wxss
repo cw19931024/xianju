@@ -8,6 +8,7 @@
 .property .view-caontainer {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   width: 100%;
   padding: 5px;
 }
@@ -21,13 +22,74 @@
 }
 .property .view-caontainer .property-info {
   margin-top: 1px solid #ddd;
+  padding-bottom: 60px;
 }
 .property .view-caontainer .property-info .info-title {
-  font-size: 14px;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 .property .view-caontainer .property-info .info-lyout {
   border-bottom: 1px solid #ddd;
   padding: 5px;
+  display: flex;
+}
+.property .view-caontainer .property-info .estateInfo {
+  justify-content: space-between;
+  align-items: center;
+}
+.property .view-caontainer .property-info .dateInfo {
+  flex-direction: column;
+}
+.property .view-caontainer .property-info .labelInfo {
+  flex-direction: column;
+}
+.property .view-caontainer .property-info .labelInfo .info-labels {
+  display: flex;
+}
+.property .view-caontainer .property-info .labelInfo .info-labels .label-group {
+  width: 60px;
+  height: 25px;
+  line-height: 25px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+.property .view-caontainer .property-info .labelInfo .info-labels .label-group + .label-group {
+  margin-left: 5px;
+}
+.property .view-caontainer .property-info .info-Images {
+  flex-direction: column;
+}
+.property .view-caontainer .property-info .info-Images .info-view .info-img {
+  width: 100%;
+}
+.property .view-caontainer .property-info .periphery-facility {
+  margin-bottom: 5px;
+}
+.property .view-caontainer .property-info .periphery-facility .facility-data {
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+}
+.property .view-caontainer .property-info .periphery-facility .facility-data .fatys {
+  width: 25%;
+  height: 25px;
+  line-height: 25px;
+}
+.property .view-caontainer .property-info .periphery-remark {
+  margin-bottom: 5px;
+}
+.property .view-caontainer .property-info .periphery-remark .facility-desc {
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  line-height: 2;
+}
+.property .view-caontainer .property-info .info-traffic .traffic {
+  width: 100%;
+}
+.property .view-caontainer .property-info .info-traffic .traffic map {
+  width: 100%;
+  min-height: 300px;
 }
 .property .view-btn-group {
   display: flex;

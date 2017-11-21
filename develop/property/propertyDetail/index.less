@@ -9,6 +9,7 @@
   .view-caontainer{
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     width: 100%;
     padding: 5px;
     .property-title{
@@ -21,12 +22,75 @@
     }
     .property-info{
       margin-top: 1px solid #ddd;
+      padding-bottom: 60px;
       .info-title{
-        font-size: 14px;
+        font-size: 16px;
+        margin-bottom: 5px;
       }
       .info-lyout{
         border-bottom: 1px solid #ddd;
         padding: 5px;
+        display: flex;
+      }
+      .estateInfo{
+        justify-content: space-between;
+        align-items: center;
+      }
+      .dateInfo{
+        flex-direction: column;
+      }
+      .labelInfo{
+        flex-direction: column;
+        .info-labels{
+          display: flex;
+          .label-group{
+            width: 60px;
+            height: 25px;
+            line-height: 25px;
+            border:1px solid #ddd;
+            text-align: center;
+          }
+          .label-group +.label-group{margin-left: 5px;}
+        }
+      }
+      .info-Images{
+        flex-direction: column;
+        .info-view{
+          .info-img{
+            width: 100%;
+          }
+        }
+      }
+      .periphery-facility{
+        margin-bottom: 5px;
+        .facility-data{
+          flex-wrap: wrap;
+          display: flex;
+          width: 100%;
+          .fatys{
+            width: 25%;
+            height: 25px;
+            line-height: 25px;
+          }
+        }
+      }
+      .periphery-remark{
+        margin-bottom: 5px;
+        .facility-desc{
+          flex-wrap: wrap;
+          display: flex;
+          width: 100%;
+          line-height: 2;
+        }
+      }
+      .info-traffic{
+        .traffic{
+          width: 100%;
+          map{
+            width: 100%;
+            min-height: 300px;
+          }
+        }
       }
     }
   }

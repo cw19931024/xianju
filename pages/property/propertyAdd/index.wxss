@@ -1,99 +1,13 @@
 .property {
   font-size: 12px;
-  position: relative;
+  border-top: 1px solid #ddd;
 }
-.property .Search {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 0 10px;
-  box-sizing: border-box;
+.weui-cell__bd {
+  font-size: 14px;
 }
-.property .content-search {
-  padding: 10px;
-  background: rgba(8, 0, 0, 0.6);
-  position: absolute;
-  width: calc(100% - 20px);
-  top: 0px;
-  left: 0px;
-  z-index: 1;
-  color: white;
-  display: none;
+.weui-cell:before {
+  border-top: 0;
 }
-.property .view-swiper {
-  position: relative;
-  width: 100%;
-  z-index: 0;
-}
-.property .view-swiper image {
-  width: 100%;
-}
-.property .view-sequen {
-  border-bottom: 1px solid #ddd;
-  overflow: hidden;
-  text-align: center;
-}
-.property .view-sequen .sequen-type {
-  width: 25%;
-  float: left;
-  padding: 8px 0;
-}
-.property .view-content {
-  padding: 5px  0 ;
-  width: 100%;
-  box-sizing: border-box;
-}
-.property .view-content .viewList {
-  padding: 5px 10px;
-  box-sizing: border-box;
-  width: 100%;
-  overflow: hidden;
-  border-bottom: 1px solid #ddd;
-}
-.property .view-content .viewList .viewImage {
-  float: left;
-  width: 110px;
-}
-.property .view-content .viewList .viewImage image {
-  width: 100%;
-  height: 95px;
-  font-size: 0;
-}
-.property .view-content .viewList .viewText {
-  width: calc(100% - 110px);
-  float: left;
-  padding-left: 10px;
-  box-sizing: border-box;
-}
-.property .view-content .viewList .viewText .Text-tit {
-  font-size: 16px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  color: #333;
-  margin-bottom: 8px;
-}
-.property .view-content .viewList .viewText .Text-content {
-  position: relative;
-  margin-bottom: 7px;
-}
-.property .view-content .viewList .viewText .Text-content .Text-money {
-  color: #df3031;
-  font-size: 15px;
-  font-weight: bold;
-  position: absolute;
-  right: 0px;
-  top: -2px;
-}
-.property .view-content .viewList .viewText .Text-info {
-  margin-bottom: 6px;
-}
-.property .view-content .viewList .viewText .Text-info .info-date {
-  float: right;
-  margin-right: 1px;
-}
-.property .view-content .viewList .viewText .property-icon span {
-  border: 1px solid #259fca;
-  color: #259fca;
-  padding: 0 5px;
-  margin: 0 2px;
+.weui-cells:before {
+  border-top: 0;
 }
